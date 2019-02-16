@@ -1,0 +1,10 @@
+<h1>Working with rails on rubymine</h1>
+
+<h2>Here are the list of the posts</h2>
+<% @posts.map do |post| %>
+  <div class="card p-2 mb-3">
+    <h3><%= post.title %></h3>
+    <p><%= post.body %></p>
+    <%= link_to "Read more", post_path(post), {:class => 'btn btn-primary'} %>
+  </div>
+<% end %>
